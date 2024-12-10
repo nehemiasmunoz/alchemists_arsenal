@@ -25,6 +25,22 @@ public class Pacient {
         this.allergies = allergies;
     }
 
+
+    private Pacient(String fullName, String gender){
+        this.fullName = fullName;
+        this.gender = gender;
+        this.age = 18;
+        this.address = "";
+
+    }
+
+    public static Pacient make(String fullName, String gender){
+        return new Pacient(fullName, gender);
+    }
+    public Pacient build(){
+        return this;
+    }
+
     public long getId() {
         return id;
     }
@@ -33,64 +49,59 @@ public class Pacient {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
 
     public String getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public Pacient setAge(int age) {
         this.age = age;
+        return this;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public Pacient setAddress(String address) {
+        this.address = address;return this;
     }
 
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public Pacient setPhone(String phone) {
+        this.phone = phone;return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public Pacient setEmail(String email) {
+        this.email = email;return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public Pacient setDescription(String description) {
+        this.description = description;return this;
     }
 
     public String getAllergies() {
         return allergies;
     }
 
-    public void setAllergies(String allergies) {
-        this.allergies = allergies;
+    public Pacient setAllergies(String allergies) {
+        this.allergies = allergies;return this;
     }
 
 
