@@ -1,14 +1,14 @@
-package com.marvic.alchemists_arsenal.model.pacient;
+package com.marvic.alchemists_arsenal.model.patient;
 
-import com.marvic.alchemists_arsenal.dtos.pacient.PacientDTO;
+import com.marvic.alchemists_arsenal.dtos.patient.PatientDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "pacients")
-public class Pacient {
+@Table(name = "patients")
+public class Patient {
     @Id
     @GeneratedValue
     private long id;
@@ -21,9 +21,10 @@ public class Pacient {
     private String description;
     private String allergies;
 
-    public Pacient() {}
+    public Patient() {
+    }
 
-    public Pacient(PacientDTO dto) {
+    public Patient(PatientDTO dto) {
         this.fullName = dto.fullName();
         this.gender = dto.gender();
         this.age = dto.age();
@@ -34,7 +35,7 @@ public class Pacient {
         this.allergies = dto.allergies();
     }
 
-    private Pacient(String fullName, String gender){
+    private Patient(String fullName, String gender) {
         this.fullName = fullName;
         this.gender = gender;
         this.age = 18;
@@ -42,10 +43,11 @@ public class Pacient {
 
     }
 
-    public static Pacient make(String fullName, String gender){
-        return new Pacient(fullName, gender);
+    public static Patient make(String fullName, String gender) {
+        return new Patient(fullName, gender);
     }
-    public Pacient build(){
+
+    public Patient build() {
         return this;
     }
 
@@ -67,7 +69,7 @@ public class Pacient {
         return age;
     }
 
-    public Pacient setAge(int age) {
+    public Patient setAge(int age) {
         this.age = age;
         return this;
     }
@@ -76,44 +78,49 @@ public class Pacient {
         return address;
     }
 
-    public Pacient setAddress(String address) {
-        this.address = address;return this;
+    public Patient setAddress(String address) {
+        this.address = address;
+        return this;
     }
 
     public String getPhone() {
         return phone;
     }
 
-    public Pacient setPhone(String phone) {
-        this.phone = phone;return this;
+    public Patient setPhone(String phone) {
+        this.phone = phone;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public Pacient setEmail(String email) {
-        this.email = email;return this;
+    public Patient setEmail(String email) {
+        this.email = email;
+        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public Pacient setDescription(String description) {
-        this.description = description;return this;
+    public Patient setDescription(String description) {
+        this.description = description;
+        return this;
     }
 
     public String getAllergies() {
         return allergies;
     }
 
-    public Pacient setAllergies(String allergies) {
-        this.allergies = allergies;return this;
+    public Patient setAllergies(String allergies) {
+        this.allergies = allergies;
+        return this;
     }
 
-    public PacientDTO toDto(){
-        return new PacientDTO(
+    public PatientDTO toDto() {
+        return new PatientDTO(
                 this.fullName,
                 this.gender,
                 this.age,

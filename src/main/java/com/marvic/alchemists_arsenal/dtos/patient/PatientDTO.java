@@ -1,6 +1,6 @@
-package com.marvic.alchemists_arsenal.dtos.pacient;
+package com.marvic.alchemists_arsenal.dtos.patient;
 
-public record PacientDTO(
+public record PatientDTO(
         String fullName,
         String gender,
         int age,
@@ -9,4 +9,5 @@ public record PacientDTO(
         String email,
         String description,
         String allergies
-) {}
+) {
+}

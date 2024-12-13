@@ -1,6 +1,7 @@
 package com.marvic.alchemists_arsenal;
 
-import com.marvic.alchemists_arsenal.model.pacient.Pacient;
+import com.marvic.alchemists_arsenal.model.patient.Patient;
+import com.marvic.alchemists_arsenal.repository.patient.IPatientRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -10,19 +11,20 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class AlchemistsArsenalApplication {
-	private Logger log = LoggerFactory.getLogger(AlchemistsArsenalApplication.class);
-	public static void main(String[] args) {
-		SpringApplication.run(AlchemistsArsenalApplication.class, args);
-	}
+    private final Logger log = LoggerFactory.getLogger(AlchemistsArsenalApplication.class);
 
-	@Bean
-	CommandLineRunner init(IPacientRepository pacientRepository){
-		return (args) -> {
+    public static void main(String[] args) {
+        SpringApplication.run(AlchemistsArsenalApplication.class, args);
+    }
 
-			Pacient nehemias = Pacient.make("Nehemias", "masculino");
-			Pacient ambar = Pacient.make("Ambar", "femenino");
-			log.info("Paciente 1: {}", pacientRepository.save(nehemias));
-			log.info("Paciente 2: {}", pacientRepository.save(ambar));
-		};
-	}
+    @Bean
+    CommandLineRunner init(IPatientRepository pacientRepository) {
+        return (args) -> {
+
+            Patient nehemias = Patient.make("Nehemias", "masculino");
+            Patient ambar = Patient.make("Ambar", "femenino");
+            log.info("Paciente 1: {}", pacientRepository.save(nehemias));
+            log.info("Paciente 2: {}", pacientRepository.save(ambar));
+        };
+    }
 }
