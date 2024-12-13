@@ -1,7 +1,16 @@
-package com.marvic.alchemists_arsenal.model;
+package com.marvic.alchemists_arsenal.model.pacient;
 
+import com.marvic.alchemists_arsenal.dtos.pacient.PacientDTO;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "pacients")
 public class Pacient {
+    @Id
+    @GeneratedValue
     private long id;
     private String fullName;
     private String gender;
@@ -14,17 +23,16 @@ public class Pacient {
 
     public Pacient() {}
 
-    public Pacient(String fullName, String gender, int age, String address, String phone, String email, String description, String allergies) {
-        this.fullName = fullName;
-        this.gender = gender;
-        this.age = age;
-        this.address = address;
-        this.phone = phone;
-        this.email = email;
-        this.description = description;
-        this.allergies = allergies;
+    public Pacient(PacientDTO dto) {
+        this.fullName = dto.fullName();
+        this.gender = dto.gender();
+        this.age = dto.age();
+        this.address = dto.address();
+        this.phone = dto.phone();
+        this.email = dto.email();
+        this.description = dto.description();
+        this.allergies = dto.allergies();
     }
-
 
     private Pacient(String fullName, String gender){
         this.fullName = fullName;
@@ -104,5 +112,16 @@ public class Pacient {
         this.allergies = allergies;return this;
     }
 
-
+    public PacientDTO toDto(){
+        return new PacientDTO(
+                this.fullName,
+                this.gender,
+                this.age,
+                this.address,
+                this.phone,
+                this.email,
+                this.description,
+                this.allergies
+        );
+    }
 }
