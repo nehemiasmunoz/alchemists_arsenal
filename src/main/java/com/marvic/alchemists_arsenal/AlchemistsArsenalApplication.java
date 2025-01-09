@@ -1,7 +1,7 @@
 package com.marvic.alchemists_arsenal;
 
-import com.marvic.alchemists_arsenal.model.patient.Patient;
-import com.marvic.alchemists_arsenal.repository.patient.IPatientRepository;
+import com.marvic.alchemists_arsenal.patient.model.Patient;
+import com.marvic.alchemists_arsenal.patient.repository.IPatientRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

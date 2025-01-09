@@ -1,9 +1,9 @@
-package com.marvic.alchemists_arsenal.services;
+package com.marvic.alchemists_arsenal.patient.services;
 
-import com.marvic.alchemists_arsenal.dtos.patient.PatientDTO;
-import com.marvic.alchemists_arsenal.interfaces.IPatientService;
-import com.marvic.alchemists_arsenal.model.patient.Patient;
-import com.marvic.alchemists_arsenal.repository.patient.IPatientRepository;
+import com.marvic.alchemists_arsenal.patient.dtos.PatientDTO;
+import com.marvic.alchemists_arsenal.patient.interfaces.IPatientService;
+import com.marvic.alchemists_arsenal.patient.model.Patient;
+import com.marvic.alchemists_arsenal.patient.repository.IPatientRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

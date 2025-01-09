@@ -1,6 +1,6 @@
-package com.marvic.alchemists_arsenal.interfaces;
+package com.marvic.alchemists_arsenal.patient.interfaces;
 
-import com.marvic.alchemists_arsenal.dtos.patient.PatientDTO;
+import com.marvic.alchemists_arsenal.patient.dtos.PatientDTO;
 
 import java.util.List;
 import java.util.Optional;

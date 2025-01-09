@@ -1,4 +1,4 @@
-package com.marvic.alchemists_arsenal.dtos.patient;
+package com.marvic.alchemists_arsenal.patient.dtos;
 
 public record PatientDTO(
         String fullName,

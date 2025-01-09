@@ -1,6 +1,6 @@
-package com.marvic.alchemists_arsenal.repository.patient;
+package com.marvic.alchemists_arsenal.patient.repository;
 
-import com.marvic.alchemists_arsenal.model.patient.Patient;
+import com.marvic.alchemists_arsenal.patient.model.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

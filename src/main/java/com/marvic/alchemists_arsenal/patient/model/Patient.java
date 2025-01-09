@@ -1,6 +1,6 @@
-package com.marvic.alchemists_arsenal.model.patient;
+package com.marvic.alchemists_arsenal.patient.model;
 
-import com.marvic.alchemists_arsenal.dtos.patient.PatientDTO;
+import com.marvic.alchemists_arsenal.patient.dtos.PatientDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

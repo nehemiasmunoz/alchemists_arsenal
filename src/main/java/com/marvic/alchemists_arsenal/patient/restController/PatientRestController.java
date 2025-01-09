@@ -1,7 +1,7 @@
-package com.marvic.alchemists_arsenal.restController;
+package com.marvic.alchemists_arsenal.patient.restController;
 
-import com.marvic.alchemists_arsenal.dtos.patient.PatientDTO;
-import com.marvic.alchemists_arsenal.interfaces.IPatientService;
+import com.marvic.alchemists_arsenal.patient.dtos.PatientDTO;
+import com.marvic.alchemists_arsenal.patient.interfaces.IPatientService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
