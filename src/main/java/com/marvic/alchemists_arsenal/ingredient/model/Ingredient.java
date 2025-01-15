@@ -1,9 +1,7 @@
 package com.marvic.alchemists_arsenal.ingredient.model;
 
-import com.marvic.alchemists_arsenal.ingredient.relations.RecipeIngredient;
+import com.marvic.alchemists_arsenal.ingredient.dtos.NewIngredientDTO;
 import jakarta.persistence.*;
-
-import java.util.Set;
 
 @Entity
 public class Ingredient {
@@ -21,6 +19,11 @@ public class Ingredient {
         this.id = id;
         this.name = name;
         this.description = description;
+    }
+
+    public Ingredient(NewIngredientDTO newIngredientDTO) {
+        this.name = newIngredientDTO.name();
+        this.description = newIngredientDTO.description();
     }
 
     public long getId() {
